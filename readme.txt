@@ -13,11 +13,6 @@ Easy facebook like box display facebook like box. it enable Facebook Page owners
 
 Easy facebook like box display facebook like box. it enable Facebook Page owners to attract and gain Likes from their own website. The Like Box enables users to see page likes, recent posts from the page and Like button and which of friends like this page too.
 
-*   "Contributors" iamshehryar wp.org/wp-plugins.org usernames
-*   "Tags" buddypress, Facebook, facebook like, facebook like box, facebook like button, fb like, wordpress facebook like box, facebook like for wordpress
-*   "Requires at least" 2.8.6
-*   "Tested up to" 3.9.1
-*   Stable tag 1.0
 
 == Installation ==
 
