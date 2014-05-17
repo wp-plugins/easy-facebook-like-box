@@ -13,7 +13,7 @@ Easy facebook like box display facebook like box. it enable Facebook Page owners
 
 Easy facebook like box display facebook like box. it enable Facebook Page owners to attract and gain Likes from their own website. The Like Box enables users to see page likes, recent posts from the page and Like button and which of friends like this page too.
 
-= Options ==
+= Options =
 
 1. Facebook Page URL - enter an URL address of your Facebook fan page.
 2. Width - set the width of the like box in pixels.
@@ -29,29 +29,20 @@ Easy facebook like box display facebook like box. it enable Facebook Page owners
 = Option 1 =
 
 1. Upload the entire Easy Facebook Like Box folder to your wp-content/plugins/ directory.
-
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 
 = Option 2 =
 
 1. Download Easy Facebook Like Box.
-
 2. Goto wordpress dashboard > plugin > add new and click on upload.
-
 3. Browse Easy Facebook Like Box and click on upload button.
-
 4. Then click on Activate plugin.
 
 == Screenshots ==
 
 1. Facebook Like box in dark color scheme.
-
 2. Facebook Like box in light color scheme.
-
-3  Showing latest post from facebook fan page and faces.
-
-4. Copy your facebook page name from url.
-
-5. Showing from Backend.
-
+3. Showing latest post from facebook fan page and faces.
+4. Showing latest post from facebook fan page and faces.
+5. Copy your facebook page name from url.
 
