@@ -3,7 +3,7 @@ Contributors: iamshehryar
 Tags: buddypress, Facebook, facebook like, facebook like box, facebook like button, fb like, wordpress facebook like box, facebook like for wordpress
 Requires at least: 2.8.6
 Tested up to: 4.0
-Stable tag: 2.0
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,8 @@ Easy facebook like box display facebook like box. it enable Facebook Page owners
 8. Border - choose show or hide border around the facebook like box.
 
 = Shortcode =
+
+Now Shortcode is available in Easy Facebook Like Box and User can easily create shortcode by using widget.
 
 [easy-fb-like-box url="enter your facebook page url" width="set your width" height="set your height" theme="choose one theme light or dark" faces="choose true or false" header="choose ture or false" posts="choose true or false" border="choose true or false"]
 
