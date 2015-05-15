@@ -2,7 +2,7 @@
 Contributors: iamshehryar
 Tags: buddypress, Facebook, facebook like, facebook like box, facebook like button, fb like, wordpress facebook like box, facebook like for wordpress
 Requires at least: 2.8.6
-Tested up to: 4.0
+Tested up to: 4.2.2
 Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -18,11 +18,9 @@ Easy facebook like box display facebook like box. it enable Facebook Page owners
 1. Facebook Page URL - enter an URL address of your Facebook fan page.
 2. Width - set the width of the like box in pixels.
 3. Height - Set the height of like box in pixels.
-4. Color Scheme - choose the color scheme for the like box. 2 color scheme are available dark or light.
-5. Show Faces - choose show or hide faces.
-6. Stream - choose show or hide lastest posts from your facebook fan page.
-7. Header - choose show or hide header.
-8. Border - choose show or hide border around the facebook like box.
+4. Show Faces - choose show or hide faces.
+5. Posts - choose show or hide lastest posts from your facebook fan page.
+6. Cover Photo - choose show or hide Cover Photo.
 
 = Shortcode =
 

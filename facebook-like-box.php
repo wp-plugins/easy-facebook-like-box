@@ -18,7 +18,7 @@ Description: Easy facebook like box display facebook like box. it enable Faceboo
 
 
 
-Version: 2.1
+Version: 3.0
 
 
 
@@ -114,19 +114,11 @@ if( $instance) {
 
 
 
-	 $showheader = esc_attr($instance['showheader']);
+	 $hidecover = esc_attr($instance['hidecover']);
 
 
 
 	 $showpost = esc_attr($instance['showpost']);
-
-
-
-	 $showborder = esc_attr($instance['showborder']);
-
-
-
-	 $colorscheme = esc_attr($instance['colorscheme']);
 
 
 
@@ -158,19 +150,11 @@ if( $instance) {
 
 
 
-	 $showheader = '';
+	 $hidecover = '';
 
 
 
 	 $showpost = '';
-
-
-
-	 $showborder = '';
-
-
-
-	 $colorscheme = '';
 	 
 
 
@@ -261,60 +245,6 @@ if( $instance) {
 
 </p>
 
-
-
-
-
-
-
-<p>
-
-
-
-<label for="<?php echo $this->get_field_id('colorscheme'); ?>"><?php _e('Color Scheme', 'wp_widget_plugin'); ?></label>
-
-
-
-<select name="<?php echo $this->get_field_name('colorscheme'); ?>" id="<?php echo $this->get_field_id('colorscheme'); ?>" class="widefat">
-
-
-
-<?php
-
-
-
-$options = array('light', 'dark');
-
-
-
-foreach ($options as $option) {
-
-
-
-echo '<option value="' . $option . '" id="' . $option . '"', $colorscheme == $option ? ' selected="selected"' : '', '>', $option, '</option>';
-
-
-
-}
-
-
-
-?>
-
-
-
-</select>
-
-
-
-</p>
-
-
-
-
-
-
-
 <p>
 
 
@@ -331,11 +261,11 @@ echo '<option value="' . $option . '" id="' . $option . '"', $colorscheme == $op
 
 
 
-<input id="<?php echo $this->get_field_id('showheader'); ?>" name="<?php echo $this->get_field_name('showheader'); ?>" type="checkbox" value="1" <?php checked( '1', $showheader ); ?> />
+<input id="<?php echo $this->get_field_id('hidecover'); ?>" name="<?php echo $this->get_field_name('hidecover'); ?>" type="checkbox" value="1" <?php checked( '1', $hidecover ); ?> />
 
 
 
-<label for="<?php echo $this->get_field_id('showheader'); ?>"><?php _e('Show Header', 'wp_widget_plugin'); ?></label>
+<label for="<?php echo $this->get_field_id('hidecover'); ?>"><?php _e('Hide Cover', 'wp_widget_plugin'); ?></label>
 
 
 
@@ -355,18 +285,6 @@ echo '<option value="' . $option . '" id="' . $option . '"', $colorscheme == $op
 
 
 
-
-
-
-
-<input id="<?php echo $this->get_field_id('showborder'); ?>" name="<?php echo $this->get_field_name('showborder'); ?>" type="checkbox" value="1" <?php checked( '1', $showborder ); ?> />
-
-
-
-<label for="<?php echo $this->get_field_id('showborder'); ?>"><?php _e('Show Border', 'wp_widget_plugin'); ?></label>
-
-
-
 </p>
 <p>
 
@@ -375,13 +293,12 @@ echo '<option value="' . $option . '" id="' . $option . '"', $colorscheme == $op
 <label for="<?php echo $this->get_field_id('shortcode'); ?>"><?php _e('Shortcode:', 'wp_widget_plugin'); ?></label>
 <?php
 if ($face == 1){ $faces = 'true'; } else { $faces = 'false'; }
-if ($showheader == 1){ $showheaders = 'true'; } else { $showheaders = 'false'; }
+if ($hidecover == 1){ $hidecover = 'true'; } else { $hidecover = 'false'; }
 if ($showpost == 1){ $showposts = 'true'; } else { $showposts = 'false'; }
-if ($showborder == 1){ $showborders = 'true'; } else { $showborders = 'false'; }
 ?>
 
 <textarea  rows="4" cols="50" class="widefat" id="<?php echo $this->get_field_id('shortcode'); ?>" name="<?php echo $this->get_field_name('shortcode'); ?>" readonly>
-<?php echo '[easy-fb-like-box url="'.$text.'" width="'.$width.'" height="'.$height.'" theme="'.$colorscheme.'" faces="'.$faces.'" header="'.$showheaders.'" posts="'.$showposts.'" border="'.$showborders.'"]'; ?>
+<?php echo '[easy-fb-like-box url="'.$text.'" width="'.$width.'" height="'.$height.'" faces="'.$faces.'" hidecover="'.$hidecover.'" posts="'.$showposts.'"]'; ?>
 </textarea>
 
 
@@ -444,19 +361,11 @@ function update($new_instance, $old_instance) {
 
 
 
-	  $instance['showheader'] = strip_tags($new_instance['showheader']);
+	  $instance['hidecover'] = strip_tags($new_instance['hidecover']);
 
 
 
 	  $instance['showpost'] = strip_tags($new_instance['showpost']);
-
-
-
-	  $instance['showborder'] = strip_tags($new_instance['showborder']);
-
-
-
-	  $instance['colorscheme'] = strip_tags($new_instance['colorscheme']);
 	  
 
 
@@ -509,19 +418,11 @@ function widget($args, $instance) {
 
 
 
-   $showheader = $instance['showheader'];
+   $hidecover = $instance['hidecover'];
 
 
 
    $showpost = $instance['showpost'];
-
-
-
-   $showborder = $instance['showborder'];
-
-
-
-   $colorscheme = $instance['colorscheme'];
 
 
 
@@ -571,29 +472,20 @@ function widget($args, $instance) {
 
 	   if( $face == '1' ) { $face = 'true'; } else {$face = 'false';}
 
-	   if( $showheader == '1' ) { $showheader = 'true'; } else {$showheader = 'false';}
+	   if( $hidecover == '1' ) { $hidecover = 'true'; } else {$hidecover = 'false';}
 
 	   if( $showpost == '1' ) { $showpost = 'true'; } else {$showpost = 'false';}
-
-	   if( $showborder == '1' ) { $showborder = 'true'; } else {$showborder = 'false';}
 
 
 
       echo '<div id="fb-root"></div>
-
 <script>(function(d, s, id) {
-
   var js, fjs = d.getElementsByTagName(s)[0];
-
   if (d.getElementById(id)) return;
-
   js = d.createElement(s); js.id = id;
-
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=454074158008443&version=v2.0";
-
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
   fjs.parentNode.insertBefore(js, fjs);
-
-}(document, "script", "facebook-jssdk"));</script>'.'<div class="fb-like-box" data-href="'.$text.'" data-width="'.$width.'" data-height="'.$height.'" data-colorscheme="'.$colorscheme.'" data-show-faces="'.$face.'" data-header="'.$showheader.'" data-stream="'.$showpost.'" data-show-border="'.$showborder.'"></div>';
+}(document, "script", "facebook-jssdk"));</script>'.'<div class="fb-page" data-href="'.$text.'" data-width="'.$width.'" data-height="'.$height.'" data-hide-cover="'.$hidecover.'" data-show-facepile="'.$face.'" data-show-posts="'.$showpost.'"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div></div>';
 
 
 
@@ -641,39 +533,29 @@ function easy_facebook_like_box_functiona($atts){
 
 	  'height' => '',
 
-	  'theme' => 'light',
-
 	  'faces' => 'true',
 
-	  'header' => 'true',
+	  'hidecover' => 'false',
 
 	  'posts' => 'true',
 
-	  'border' => 'true',
 
    ), $atts));
 
 
 
    $return_string = '<div id="fb-root"></div>
-
 <script>(function(d, s, id) {
-
   var js, fjs = d.getElementsByTagName(s)[0];
-
   if (d.getElementById(id)) return;
-
   js = d.createElement(s); js.id = id;
-
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=454074158008443&version=v2.0";
-
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
   fjs.parentNode.insertBefore(js, fjs);
-
 }(document, "script", "facebook-jssdk"));</script>';
 
   
 
-   $return_string .= '<div class="fb-like-box" data-href="'.$url.'" data-width="'.$width.'" data-height="'.$height.'" data-colorscheme="'.$theme.'" data-show-faces="'.$faces.'" data-header="'.$header.'" data-stream="'.$posts.'" data-show-border="'.$border.'"></div>';
+   $return_string .= '<div class="fb-page" data-href="'.$url.'" data-width="'.$width.'" data-height="'.$height.'" data-hide-cover="'.$hidecover.'" data-show-facepile="'.$faces.'" data-show-posts="'.$posts.'"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div></div>';
 
    if ($width) {
 
