@@ -26,7 +26,7 @@ Author: shehryar
 
 
 
-Author URI: https://www.facebook.com/shehriyar.shehri	
+Author URI: https://www.facebook.com/iamshehryar	
 
 
 
