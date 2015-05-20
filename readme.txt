@@ -28,6 +28,8 @@ Now Shortcode is available in Easy Facebook Like Box and User can easily create 
 
 [easy-fb-like-box url="enter your facebook page url" width="set your width" height="set your height" theme="choose one theme light or dark" faces="choose true or false" header="choose ture or false" posts="choose true or false" border="choose true or false"]
 
+= Follow Me =
+<a href="https://www.facebook.com/iamshehryar" title="follow me">Facebook</a>
 
 == Installation ==
 
